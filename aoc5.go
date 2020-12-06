@@ -29,9 +29,9 @@ func main() {
 		for _, ch := range ln[:7] {
 			rng := maxRow - minRow
 			if ch == 'F' {
-				maxRow = minRow + rng / 2
+				maxRow = minRow + rng/2
 			} else if ch == 'B' {
-				minRow = minRow + rng / 2
+				minRow = minRow + rng/2
 			}
 		}
 
@@ -40,13 +40,13 @@ func main() {
 		for _, ch := range ln[7:] {
 			rng := maxCol - minCol
 			if ch == 'L' {
-				maxCol = minCol + rng / 2
+				maxCol = minCol + rng/2
 			} else if ch == 'R' {
-				minCol = minCol + rng / 2
+				minCol = minCol + rng/2
 			}
 		}
 
-		id := minRow * 8 + minCol
+		id := minRow*8 + minCol
 		if id > max {
 			max = id
 		}
@@ -57,7 +57,7 @@ func main() {
 	sort.Ints(ids)
 	last := 0
 	for _, id := range ids {
-		if id - last == 2 {
+		if id-last == 2 {
 			log.Println("Found", id-1)
 		}
 		last = id
