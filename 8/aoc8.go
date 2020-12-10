@@ -191,6 +191,7 @@ func main() {
 
 	// LAST ONE??
 
+	log.Println("out", run(insns))
 	log.Println("out", debug(insns))
 
 	if err := scanner.Err(); err != nil {
